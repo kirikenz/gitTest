@@ -7,6 +7,7 @@ private:
 public:
 	node* getRoot();
 	BST(int);
+	bool addNode(int, node*);
 	int getSize();
 	//more operations later
 };
