@@ -13,8 +13,16 @@ node* BST::getRoot()
 	return this->root;
 }
 
+void BST::addValue(int nodeValue)
+{
+	if (!addNode(nodeValue,this->root)) {
+		fprintf(stderr,"Error Adding Node");
+	}
+}
+
 bool BST::addNode(int nodeValue, node* start)
 {
+	printf("call: %p\n",start);
 	if (!start) {//NULL ptr
 		start = this->root;
 	}
@@ -41,5 +49,5 @@ bool BST::addNode(int nodeValue, node* start)
 		}
 	}
 
-	addNode(nodeValue, start);
+	addNode(nodeValue, temp);
 }
