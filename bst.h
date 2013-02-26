@@ -9,6 +9,8 @@ public:
 	BST(int);
 	void addValue(int);
 	bool addNode(int, node*);
+	void print();
+	void print(node*);
 	int getSize();
 	//more operations later
 };

@@ -22,7 +22,7 @@ void BST::addValue(int nodeValue)
 
 bool BST::addNode(int nodeValue, node* start)
 {
-	printf("call: %p\n",start);
+	//printf("call: %p\n",start);
 	if (!start) {//NULL ptr
 		start = this->root;
 	}
@@ -50,4 +50,20 @@ bool BST::addNode(int nodeValue, node* start)
 	}
 
 	addNode(nodeValue, temp);
+}
+
+void BST::print()
+{
+	this->print(this->root);
+}
+
+void BST::print(node* curNode)
+{
+	if (curNode->getLeftC()) {
+		print(curNode->getLeftC());
+	}
+	printf("%d ",curNode->getValue());
+	if (curNode->getRightC()) {
+		print(curNode->getRightC());
+	}
 }

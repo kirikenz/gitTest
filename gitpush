@@ -1,0 +1,8 @@
+#!/bin/bash
+msg=\'$1\'
+#echo $msg
+git init
+#git remote add origin https://github.com/kirikenz/gitTest.git
+git add .
+git commit -m '$msg'
+git push origin bstwork
